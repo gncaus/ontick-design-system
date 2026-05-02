@@ -113,6 +113,7 @@ import type { Component } from 'vue'
 import ComponentCard from './showcase/ComponentCard.vue'
 import { Toast } from './components/Toast'
 import ToastDemo from './showcase/demos/ToastDemo.vue'
+import ButtonDemo from './showcase/demos/ButtonDemo.vue'
 
 interface ComponentEntry {
   name: string
@@ -139,7 +140,14 @@ const categories: Category[] = [
     id: 'actions',
     label: 'Ações',
     description: 'Botões, links e outros elementos de ação interativa.',
-    components: [],
+    components: [
+      {
+        name: 'Button',
+        description: 'Botão com variantes primary, secondary e disabled. Aceita onClick prop ou evento @click nativo.',
+        status: 'ready',
+        component: ButtonDemo,
+      },
+    ],
   },
   {
     id: 'display',
